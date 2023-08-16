@@ -1,0 +1,129 @@
+/* components/news/news.wxss */
+.news{
+   background-color:#F3F5F8;
+  box-sizing: border-box;
+  width: 720rpx;
+  border-radius: 30rpx;
+  margin-bottom: 28rpx;
+  padding-bottom: 28rpx;
+}
+.newsHead{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 28rpx;
+  margin-left: 24rpx;
+}
+.more{
+  position: absolute;
+  right: 30rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.doMore{
+  margin-top: 90rpx;
+  position: absolute;
+  right: 74rpx;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF ;
+  border-radius: 30rpx;
+}
+.item{
+  height: 70rpx;
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsHead image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.te{
+  display: flex;
+  flex-direction: column;
+}
+.newsHead text{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  font-weight: 550;
+}
+.newsContent{
+  display: flex;
+  flex-direction: column;
+  margin-left: 116rpx;
+  margin-right: 92rpx;
+}
+.newsContent text{
+  font-size: 28rpx;
+}
+.newsContent image{
+  margin-top: 22rpx;
+  height: 250rpx;
+  width: 250rpx;
+  border-radius: 10rpx;
+}
+.newsContent .minImg{
+  margin-top: 22rpx;
+  height: 165rpx;
+  width: 165rpx;
+  border-radius: 10rpx;
+}
+.news .newsFoot{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 116rpx;
+  margin-top: 36rpx;
+  margin-right: 92rpx;
+}
+.news .newsFoot image{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.a{
+  display: flex;
+  align-items: center;
+}
+.im{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.textarea{
+  height: auto;
+  overflow: hidden; /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 指定显示文本的行数 */
+  -webkit-box-orient: vertical;
+  line-height: 25px; /* 规定的行高 */
+  font-size: 30rpx;
+}
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  color:skyblue;
+}
+.textarea.on {
+  display: block;
+  text-overflow: clip;
+  overflow: visible;
+}
+.finishi{
+  position: relative;
+  z-index: 9;
+}
+.finishi image{
+  width: 250rpx;
+  height: 250rpx;
+  position: absolute;
+  opacity: 0.5;
+  right:-30rpx;
+  top: -80rpx;
+}

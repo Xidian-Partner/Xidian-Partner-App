@@ -1,0 +1,57 @@
+<!--components/news/news.wxml-->
+<view class="news" >
+              <view class="newsHead" bindtap="jump">
+                  <image src='{{icon}}'></image>
+                  <view class="te">
+                      <text>{{nickName}}</text> 
+                      <text style="color: #767575;">{{createTime}}</text> 
+                </view>
+                <view class="doMore" wx:if="{{more}}">
+                       <view class="item" style=" border-bottom: solid 1rpx  #F3F5F8;" catchtap="finish">完成</view>
+                       <view  class="item" style=" border-bottom: solid 1rpx  #F3F5F8;" catchtap="modify">修改</view>
+                       <view  class="item" catchtap="delete">删除</view>
+                   </view>
+               <image wx:if="{{showMore}}" class="more" src="../../images/antOutline-more Copy@1x.png" catchtap="more"></image>
+                </view>
+            
+             
+                <view class='newsContent'>
+                    <view class="finishi" wx:if="{{isComplete}}">
+                      <image  src="../../images/finishi.png"></image>
+                     </view>
+                <view style="display: inline-block;">
+                  <text style="font-size: 30rpx; color: pink;" wx:if="{{absent}}">{{absent}}{{whenMeet || where ? ' | ' : ''}}</text>
+                  <text style="font-size: 30rpx; color: pink;" wx:if="{{whenMeet}}">{{whenMeet}}{{where ? ' | ' : ''}}</text>
+                 
+                  <text style="font-size: 30rpx; color: pink;" wx:if="{{where}}">{{where}} </text>
+                  
+                </view>
+                 
+                  <text style="font-size: 40rpx;">{{title}}</text>
+                  <view class="textarea {{isShow ? 'on' : ''}}">
+                    {{content}}
+                  <text style="font-size: 30rpx; color:rgb(0, 20, 183);" wx:for="{{lowTags}}" wx:if="{{lowTags.length}}">#{{item}}</text>
+                  </view>
+                  <view class="btn" wx:if="{{linenum>1}}" bindtap="show">
+                  {{isShow ? '收起' : '展开'}}
+                  </view>
+                  <view class="im">
+                    <image bindtap="previewImage" data-src="{{item}}" wx:for="{{imagesrc}}" src="{{item}}" class="{{imagesrc.length<3||imagesrc.length==4?'':'minImg'}}"></image>
+                  </view>
+                  </view>
+                    
+
+                <view class="newsFoot">
+                <view class="a">
+                  <image src="/images/eyes.png" mode=""/><view style="margin-left: 2rpx; color: #D26452;">{{viewTimes}}</view>
+                </view>
+                <view class="a">
+                <image src="/images/heart.png" bindtap="like" wx:if="{{isLiked}}" ></image>
+                <image src="/images/grayheart.png" bindtap="like" wx:if="{{!isLiked}}"> </image>
+                  <view style="color: #513FAB;">{{liked}}</view>
+                </view>
+                </view>
+
+              </view>
+   
+         

@@ -1,0 +1,28 @@
+<!--pages/love/love.wxml-->
+<navbar title="恋爱搭子" url="/pages/find/find"></navbar>
+<view class="main" style="margin-top: {{topHeight}}px;">
+  <view class="search">
+           <input placeholder="请输入你想要搜索的内容" model:value="{{keyword}}"></input>
+           <button  class="searchButton" bindtap="search"> <image src="/images/search.png" mode=""/></button>
+         </view>
+  <view class="title">
+    <view class='{{num==0?"titleHover":"titile1"}}' bindtap="getYou">
+      捞捞你
+    </view>
+    <view class='{{num==1?"titleHover":"titile1"}}' bindtap="getMe">
+      看看我
+    </view>
+  </view>
+
+
+
+  <view class="newsList" >
+            <view wx:for="{{newsList}}" wx:key="id">
+              <news mId="{{item.id}}" nickName="{{item.userVo.nickName}}" liked="{{item.liked}}" content="{{item.content}}" createTime="{{item.createTime}}" icon="{{item.userVo.icon}}" imagesrc="{{item.images}}" absent="{{item.absent}}" whenMeet="{{item.whenMeet}}" where="{{item.location}}" lowTags="{{item.lowTags}}" title="{{item.title}}"  otherId="{{item.userVo.id}}" isComplete="{{item.isComplete}}" viewTimes="{{item.viewTimes}}" isLiked="{{item.isLiked}}"></news>
+            </view>
+ </view>
+ <view style="display: flex; justify-content: center;">
+    <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+    <view style="color: #9E9C9D; margin-bottom: 30rpx;" wx:if="{{!isdata}}">没有更多数据了...</view>
+  </view>
+         </view>

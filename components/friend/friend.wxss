@@ -1,0 +1,39 @@
+/* components/friend/friend.wxss */
+.friend{
+  height: 130rpx;
+  box-sizing: border-box;
+  padding-left: 18rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2rpx #BBBBBB;
+  margin-left:30rpx;
+  margin-right: 30rpx;
+  color: #101010 ;
+  
+}
+.friend text{
+  margin-left: 40rpx;
+  font-size: 28rpx;
+}
+.friend image{
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 50%;
+}
+.friend .button{
+  width: 140rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  border: solid 1rpx #BBBBBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx ;
+  
+}
+.friend .right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

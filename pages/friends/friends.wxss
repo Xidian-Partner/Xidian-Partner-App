@@ -1,0 +1,27 @@
+/* pages/friends/friends.wxss */
+.content{
+  background-color: #ECF1FE ;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  border-radius: 80rpx 80rpx 0 0;
+  background-color: #FFFFFF;
+  padding-top: 26rpx;
+}
+.add{
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #7565C6;
+  bottom:200rpx;
+  right: 150rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+image{
+  width: 80rpx;
+  height: 80rpx;
+}

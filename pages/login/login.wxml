@@ -1,0 +1,29 @@
+<!--index.wxml-->
+  <navbar isSowArrow="{{true}}" url="/pages/find/find"></navbar>
+<view class="all"> 
+  <view class="top" style="margin-top: {{topHeight}}px;">
+  <text class="title"> Hello!\n</text>
+  <text class="title">欢迎加入西电搭子~</text>
+  <text style="color: #767575;">注册账号即代表您同意隐私条款与服务条款</text>
+</view>
+
+<view class="content">
+  <input placeholder="请输入学号" model:value="{{number}}" type="number"></input>
+  <input placeholder="请输入密码" model:value="{{password}}"type="password"></input>
+  <!-- <input placeholder="请输入验证码" type="number"></input>  -->
+  <!-- <button>点击获取验证码</button> -->
+</view>
+
+<view class="foot">
+    <view class="left">
+      <image src="/images/low.png"></image>
+    </view>
+    <view class="right">
+      <view class="button" bindtap="login">进入</view>
+    </view>
+
+</view>
+
+</view>
+
+

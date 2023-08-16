@@ -1,0 +1,57 @@
+/* components/people/people.wxss */
+.people{
+  position: relative;
+  box-sizing: border-box;
+  width: 750rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  height: 100rpx;
+  margin-bottom: 24rpx;
+  display: flex;
+}
+.people image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.right{
+  width:550rpx;
+}
+.people .name{
+  font-weight: 550;
+  margin-top: 15rpx;
+  margin-left: 22rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+}
+.people .name text{
+  color: #9E9C9D;
+  margin-left: 20rpx;
+}
+.people .mes{
+  font-weight: 500;
+  margin-top: 6rpx;
+  margin-left: 22rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  overflow: hidden; /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 指定显示文本的行数 */
+  -webkit-box-orient: vertical;
+}
+.people .notice{
+  font-weight: 550;
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  background-color: #D26452;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 30rpx;
+  top: 34rpx
+}

@@ -1,0 +1,73 @@
+/**index.wxss**/
+page{
+  height: 100%;
+
+}
+.all{
+  background-color: #F3F5F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.button{
+    border: solid 2rpx;
+    width: 286rpx;
+    height: 100rpx;
+    background-color: #7565C6;
+    border-radius: 50rpx;
+    color: #FFFFFF;
+    border-color:#7565C6 ;
+    font-size: 36rpx;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+  font-size: 56rpx;
+  color: #7565C6 ;
+  width: 690rpx;
+}
+input{
+  font-size: 40rpx;
+  border-bottom: solid 1rpx #BBBBBB;
+  height: 120rpx;
+  width: 80%;
+}
+.top {
+  padding-left: 70rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 20rpx;
+} 
+.content {
+  margin-top: 66rpx;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+ background-color:#FFFFFF ;
+ border-radius: 20rpx; 
+ width: 690rpx;
+ padding-bottom: 34rpx;
+
+} 
+.foot{
+  margin-top: 82rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.left{
+  margin-left: 50rpx;
+  width: 500rpx;
+  height: 579rpx;
+  margin-left: -80rpx;
+}
+.right{
+  margin-top: 290rpx;
+}
+

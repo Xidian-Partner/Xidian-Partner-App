@@ -1,0 +1,11 @@
+<!--components/people/people.wxml-->
+<view class="people">
+      <image src="{{icon}}"></image>
+      <view class="right">
+        <view class="name"> {{name}}<text> {{time}}</text> </view>
+        <view class="mes"> {{lastmessage}}</view>
+      </view>
+      <view wx:if="{{(num!=0)}}" class="notice">
+        {{num}}
+      </view>
+    </view>

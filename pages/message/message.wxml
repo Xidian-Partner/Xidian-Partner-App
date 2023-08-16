@@ -1,0 +1,19 @@
+<!--pages/square/square.wxml-->
+<navbar title="收件箱" isSowArrow="{{false}}"></navbar>
+
+<view class="all" style=" margin-top:{{topHeight}}px" >
+  <view class="content">
+    <view class="titile">
+      <view class='{{num==0?"titleHover":"chooseItem"}}' bindtap="getshu">熟 搭 子</view> 
+      <view class='{{num==1?"titleHover":"chooseItem"}}' bindtap="getsheng">生 搭 子</view> 
+    </view>
+
+    <view wx:for="{{list}}" wx:key="index"> 
+      <!-- <navigator url="/packageA/pages/chat/chat?fromId={{item.userVo.id}}&mesId={{item.messages[item.messages.length-1].id}}&userIcon{{item.userVo.icon}}&nickName={{item.userVo.nickName}}">  -->
+        <navigator url="/packageA/pages/chat/chat?fromId={{item.userVo.id}}&mesId={{item.messages[item.messages.length-1].id}}&nickName={{item.userVo.nickName}}">
+      <people time="{{item.messages[0].createTime}}" name="{{item.userVo.nickName}}" num="{{item.count}}" lastmessage="{{item.messages[0].content}}" icon="{{item.userVo.icon}}"></people>
+      </navigator>
+    </view>
+  
+  </view>
+</view>

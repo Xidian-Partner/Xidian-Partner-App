@@ -1,0 +1,64 @@
+/* pages/addfriends2/addfriends2.wxss */
+image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.head{
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 30rpx;
+  padding-top: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.head text{
+  font-size: 35rpx;
+  font-weight: 550;
+  margin-left: 20rpx;
+}
+.content{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 30rpx;
+  margin-top: 45rpx;
+  flex-direction: column;
+}
+.box text{
+  color: #9E9C9D ;
+  font-size: 30rpx;
+}
+.box input{
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 100rpx;
+  background-color: #F3F5F8 ;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+.bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom image{
+  margin-top:46rpx ;
+  width: 500rpx;
+  height: 500rpx;
+}
+.button{
+  margin-top: 46rpx;
+  width: 298rpx;
+  height: 90rpx;
+  background-color: #7565C6;
+  border-radius: 62rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 32rpx;
+}

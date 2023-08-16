@@ -1,0 +1,54 @@
+<!--pages/peopledetails/peopledetails.wxml-->
+<navbar url='/pages/find/find'></navbar>
+
+<view class="top" style="margin-top: {{topHeight}}px;">
+  <view class="one">
+  <image class="head" src="{{friendInfo.icon}}"></image>
+  <text style="margin-top: 20rpx;">{{friendInfo.nickName}}</text>
+  </view>
+  <view class="text">{{friendInfo.myDescription}}</view>
+  <view class="mid">
+
+    <navigator url="/packageA/pages/chat/chat?fromId={{friendId}}&nickName={{friendInfo.nickName}}">
+    <view class="button1">
+      <image src="/images/md-insert_comment Copy@1x.png"></image>
+    </view>
+  </navigator>
+
+    <navigator url="/pages/addfriends2/addfriends2?friendId={{friendId}}&friendName={{friendInfo.nickName}}">
+  
+    <view class="button2">
+      <image src="/images/fas fa-user-plus Copy@1x.png"></image>
+    </view>
+
+  </navigator>
+  </view>
+
+  <view class="showImage">
+    <view wx:for="{{friendInfo.picture}}"  wx:key="index">
+      <image src="{{item}}" data-src="{{item}}" bindtap='previewImage'></image>
+    </view>
+   
+</view>
+    <view class="content">
+            <view class="title">
+              <view class='{{num==0?"titleHover":"chooseItem"}}' bindtap="getDong">动态</view> 
+              <view class='{{num==1?"titleHover":"chooseItem"}}' bindtap="getZi">资料</view> 
+            </view>   
+            <view wx:if="{{!num}}" wx:for="{{list}}" wx:key="index">
+              <news mId="{{item.id}}" nickName="{{item.userVo.nickName}}" liked="{{item.liked}}" content="{{item.content}}" createTime="{{item.createTime}}" icon="{{item.userVo.icon}}" imagesrc="{{item.images}}" absent="{{item.absent}}" whenMeet="{{item.whenMeet}}" where="{{item.location}}" lowTags="{{item.lowTags}}" title="{{item.title}}"  otherId="{{item.userVo.id}}" isComplete="{{item.isComplete}}" canJump="{{false}}" isLiked="{{item.isLiked}}"></news>
+            </view>  
+            <view style="width: 100%; padding-left:68rpx; box-sizing: border-box;" wx:if="{{num}}">
+            <view class="te">QQ：{{friendInfo.qq}}</view>  
+            <view class="te">专业：{{friendInfo.majorName}}</view>  
+            <view class="te">MBTI：{{mbtiArray[friendInfo.mbti-1].title}}</view>  
+            <view class="te">星座：{{constellationArray[friendInfo.constellation-1].title}}</view>  
+            <view class="te">需求倾向：{{needArray[friendInfo.highTag-1]}}</view>  
+            </view>
+    </view>
+  </view>
+  <view style="display: flex; justify-content: center;">
+    <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+    <view style="color: #9E9C9D; margin-bottom: 30rpx;" wx:if="{{(!isdata)&&(!num)}}">没有更多数据了...</view>
+  </view>
+ 

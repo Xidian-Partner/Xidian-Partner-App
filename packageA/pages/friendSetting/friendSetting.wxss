@@ -1,0 +1,55 @@
+/* pages/friendSetting/friendSetting.wxss */
+.main{
+  display: flex;
+  flex-direction: column;
+  
+}
+.main .text{
+  margin-top: 32rpx;
+  margin-left: 30rpx;
+  font-size: 36rpx;
+  color: #101010;
+  font-weight: 550;
+  margin-bottom: 22rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  width: 690rpx;
+  background-color: #F3F5F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 34rpx;
+}
+.line{
+  height: 100rpx;
+  width: 630rpx;
+  border-bottom: solid 1rpx #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input{
+  width: 130rpx;
+  color: #767575 ;
+}
+switch{
+  color: #7565C6 ;
+}
+.button{
+  height: 90rpx;
+  width: 350rpx;
+  background-color: #7565C6;
+  color: #FFFFFF;
+  border-radius: 30rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,9 @@
+<!--components/navbar/navbar.wxml-->
+
+<view class="navbar" style="background:{{background}};height:{{navbarHeight}}px">
+  <view style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px;" class="arrow-content">
+    <view class="arrow" wx:if="{{isSowArrow}}" bindtap="handleGoToBack"></view>
+  </view>
+  <view class="text" style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px">{{title}}</view>
+</view>
+

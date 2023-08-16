@@ -1,0 +1,52 @@
+<!--pages/my/my.wxml-->
+<navbar isSowArrow="{{false}}"></navbar>
+
+
+<view class="top" style="margin-top: {{topHeight}}px;">
+  <view class="one">
+  <image class="head" wx:if="{{userIcon}}" src="{{userIcon}}"></image>
+  <image class="head" wx:if="{{!userIcon}}" src="/images/头像.png"></image>
+  <text wx:if="{{userName}}">{{userName}}</text>
+  <text wx:if="{{!userName}}"> XDUer</text>
+  </view>
+  <view class="mid">
+       <navigator  url='/pages/myDetails/myDetails'>
+        <view class="button">资料/编辑</view>
+       </navigator>
+       <navigator url="/pages/login/login" wx:if="{{!token}}"> <view class="button">登录</view>
+       </navigator>
+       <view class="button" wx:if="{{token}}" bindtap="logout">退出登录</view>
+  </view>
+  <view class="words">
+    个人简介：{{userMessages}}
+  </view>
+  
+  <view class="showImage">
+  <view wx:for="{{picture}}"  wx:key="index">
+    <image src="{{item}}" data-src="{{item}}" bindtap='previewImage'></image>
+  </view>  
+</view>
+    <view class="content">
+            <view class="title">
+              <view class='{{num==0?"titleHover":"chooseItem"}}' bindtap="getDong">动态</view> 
+              <view  class='{{num==1?"titleHover":"chooseItem"}}' bindtap="getZi">资料</view> 
+            </view>   
+            <view wx:for="{{list}}" wx:key="id" wx:if="{{!num}}">
+              <news mId="{{item.id}}" nickName="{{item.userVo.nickName}}" liked="{{item.liked}}" content="{{item.content}}" createTime="{{item.createTime}}" icon="{{item.userVo.icon}}" imagesrc="{{item.images}}" absent="{{item.absent}}" whenMeet="{{item.whenMeet}}" where="{{item.location}}" lowTags="{{item.lowTags}}" title="{{item.title}}"  otherId="{{item.userVo.id}}" isComplete="{{item.isComplete}}" showMore="{{true}}" canJump="{{false}}" viewTimes="{{item.viewTimes}}" isLiked="{{item.isLiked}}"> </news>
+            </view>  
+            <view style="width: 100%; padding-left:68rpx; box-sizing: border-box;" wx:if="{{num}}">
+            <view class="te">QQ：{{userQQ}}</view>  
+            <view class="te">专业：{{userMajor}}</view>  
+            <view class="te">MBTI：{{mbtiArray[userMBTI].title}}</view>  
+            <view class="te">星座：{{constellationArray[userXingzuo].title}}</view>  
+            <view class="te">需求倾向：{{needArray[need]}}</view>  
+            </view>
+    </view>
+     
+  </view>
+  <view style="display: flex; justify-content: center;">
+         <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+         <view style="color: #9E9C9D; margin-bottom: 30rpx;" wx:if="{{(!isdata)&&(!num)}}">没有更多数据了...</view>
+       </view>
+
+

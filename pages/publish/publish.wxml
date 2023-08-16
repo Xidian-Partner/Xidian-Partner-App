@@ -1,0 +1,73 @@
+<!--pages/publish/publish.wxml-->
+<navbar title="找个搭子" isSowArrow="{{false}}"></navbar>
+  <view class='top' style="margin-top: {{topHeight}}px; padding-top: 3px;">
+    <view class="content">
+       <view style="height: 100rpx; ">
+          <input placeholder="标题：" model:value="{{iptTitle}}"></input>
+       </view>
+          <textarea  placeholder="快去寻找你的搭子吧..."
+            model:value="{{iptValue}}"
+            ></textarea>
+           <view class="img">
+               <view class="box" wx:if="{{picture}}" wx:for="{{picture}}" wx:key="index">
+                   <image  src="{{item}}" bindtap="show" data-index='{{index}}'></image>
+                    <image class="delete" data-index='{{index}}' bindtap="delete" src="../../images/close.png"></image>
+                </view>
+              <image wx:if="{{!(picture.length>8)}}" src="/images/image.png" bindtap="upImage"></image>
+           </view>
+           <view class="right"> 
+            <view class="button" bindtap="cancel" wx:if="{{modify}}">取消修改</view>
+               <view class="button" bindtap="submit"  >发布</view>
+                
+             </view>
+      </view>
+
+  <view class="bottom">
+    <view class="mid">
+          <view class="line">
+            <picker mode="selector" range="{{array}}" value="{{highTag}}" bindchange="pickerChange">
+                  <view >
+                    {{array[highTag]}}
+                  </view>
+                </picker>
+                <view class="tx">
+                  必填
+                </view>
+          </view>    
+          <view class="line">
+            <input placeholder="{{highTag==2?'捞捞你or看看我':'请输入tag'}}" model:value='{{iptLowtag1}}'></input>
+            <view class="tx">
+            必填
+          </view>
+          </view>
+          <view class="line" wx:if="{{iptLowtag1}}">
+            <input placeholder="tag2" model:value='{{iptLowtag2}}'></input>
+            <view class="tx">
+            选填
+          </view>
+          </view>
+          <view class="line">
+          <input placeholder="请输入还缺几人" model:value='{{iptPeople}}'></input>
+          <view class="tx">
+            选填
+          </view>
+         </view>
+         <view class="line">
+          <input placeholder="请输入时间" model:value='{{iptTime}}'></input>
+          <view class="tx">
+            选填
+          </view>
+         </view>
+         <view class="line">
+          <input placeholder="请输入地点" model:value='{{iptPlace}}'></input>
+          <view class="tx">
+            选填
+          </view>
+         </view>    
+    </view>
+  </view>
+  </view>
+
+
+
+

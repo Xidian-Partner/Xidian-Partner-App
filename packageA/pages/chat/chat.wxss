@@ -1,0 +1,118 @@
+/* pages/chat/chat*/
+.top image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.top{
+  position: fixed;
+  left: 80rpx;
+ z-index: 9999;
+display: flex;
+align-items: center;
+}
+.more{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #003EF8;
+}
+.content .right{
+  min-height: 88rpx;
+  margin-top: 30rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.mes1{
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  max-width: 70%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+  font-size: 38rpx;
+  background-color: #7565C6 ;
+  border-radius: 30rpx;
+  color: #FFFFFF ;
+  
+}
+.mes2{
+  color:#101010 ;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+  background-color: #EBEFF9;
+  border-radius: 30rpx;
+  font-size: 38rpx;
+  margin-left: 30rpx;
+  max-width: 70%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.content .left{
+  margin-top: 30rpx;
+  width: fit-content;
+  width: 100%;
+  min-height: 88rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.input-box {
+  left: 30rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 40rpx;
+  width: 550rpx;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #F3F5F8;
+  height: 84rpx;
+  display: flex;
+  align-items: center;
+  border: solid 1rpx #bbbbbb;
+  border-radius: 34px;
+}
+.send-box{
+  right: 30rpx;
+  position: fixed;
+  bottom: 40rpx;
+  width: 120rpx;
+  height: 84rpx;
+  background-color: #7565C6 ;
+  border-radius: 42rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.send-box image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.button{
+  margin-left: 30rpx;
+  width:100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1rpx;
+  border-radius: 30rpx;
+}
+.box{
+  background-color: #FFFFFF;
+  height: 130rpx;
+  position: fixed;
+  bottom: 0rpx;
+  right: 30rpx;
+  left: 30rpx;
+}

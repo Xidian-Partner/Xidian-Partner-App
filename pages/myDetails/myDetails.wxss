@@ -1,0 +1,76 @@
+/* pages/myDetails/myDetails.wxss */
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+}
+.line image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.line{
+  border-bottom: solid 1px #FFFFFF;
+  height: 100rpx;
+  width: 630rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  
+}
+input{
+  width: 200rpx;
+  color: #767575;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 690rpx;
+  background-color: #F3F5F8;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.pic .img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.pic{
+  display: flex;
+}
+.pic-box{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+  width: 690rpx;
+  height: 310rpx;
+  background-color: #F3F5F8;
+  border-radius: 20rpx;
+}
+.text{
+  display: flex;
+  align-items: center;
+  height: 72rpx;
+}
+picker .text{
+  width: 200rpx;
+  color: #767575;
+}
+.itembox{
+  text-align: center;
+  position:relative;
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 30rpx;
+}
+.delete{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 10rpx;
+ }

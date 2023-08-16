@@ -1,0 +1,25 @@
+// components/people/people.js
+Component({
+  properties:{
+    icon:{
+      type:String,
+      value:''
+    },
+    time:{
+      type:String,
+      value:''
+    },
+    name:{
+      type:String,
+      value:''
+    },
+    num:{
+      type:String,
+      value:''
+    },
+    lastmessage:{
+      type:String,
+      value:''
+    }
+  }
+})

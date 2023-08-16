@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/my/my",
+    "pages/message/message",
+    "pages/publish/publish",
+    "pages/friends/friends",
+    "pages/myDetails/myDetails",
+    "pages/login/login",
+    "pages/addfriends2/addfriends2"
+  ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/peopledetails/peopledetails",
+        "pages/study/study",
+        "pages/love/love",
+        "pages/chat/chat",
+        "pages/friendSetting/friendSetting"
+      ]
+  }
+],
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "news": "/components/news/news",
+    "people": "/components/people/people",
+    "friend": "/components/friend/friend",
+    "van-loading":"/miniprogram_npm/@vant/weapp/loading/index"
+  },
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#9E9C9D",
+    "selectedColor": "#7565C6",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "/images/search1.png",
+        "selectedIconPath": "/images/riLine-search-line@1x.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/stLine-message-l@1x.png",
+        "selectedIconPath": "/images/stLine-message-l Copy@1x.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "/images/ze-add Copy@1x.png",
+        "selectedIconPath": "/images/ze-add Copy@1x.png"
+      },
+      {
+        "pagePath": "pages/friends/friends",
+        "text": "搭友",
+        "iconPath": "/images/contacts1.png",
+        "selectedIconPath": "/images/riLine-contacts-line Copy@1x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/riLine-account-circle-line@1x.png",
+        "selectedIconPath": "/images/riLine-account-circle-line Copy@1x.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,40 @@
+<!--pages/chat/chat.wxml-->
+<navbar title="" ></navbar>
+<view class="top" style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px;"   >
+  <image src="{{icon}}"></image>
+  <text style="margin-left: 22rpx;"> {{name}}</text>
+</view>
+
+  <scroll-view scroll-y="true" scroll-into-view="{{theLast}}"  class="content" style="margin-top: {{topHeight}}px;  height: {{height-topHeight}}px;">
+        <view class="more" bindtap="getMore">点击获取更多...</view>
+  <view wx:for="{{meslist}}" id="item{{index}}">
+    <view wx:if="{{!(item.fromId==fromId)}}" class="right">
+        <view class="mes1">
+        {{item.content}}
+        </view>
+          </view>
+
+      <view wx:if="{{item.fromId==fromId}}" class="left">
+        <view class="mes2">
+          {{item.content}}
+          <view wx:if="{{item.type==3}}" style="display: flex;">
+            <view class="button" style="background-color: #7565C6 ; color: #FFFFFF;" bindtap="accept">接受</view><view class="button" style="background-color:#9E9C9D; color: #FFFFFF;">拒绝</view>
+          </view>
+        </view>
+          </view>
+    </view>
+  </scroll-view>
+
+<view class="box">
+  <view class="input-box">
+    <input placeholder="请输入..." model:value="{{content}}" style="width: 100%;"></input>
+  </view>
+  <view class="send-box" bindtap="send">
+    <image src="/images/arrow-right .png" ></image>
+  </view>
+</view>
+
+  
+
+
+

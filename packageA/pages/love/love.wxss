@@ -1,0 +1,71 @@
+/* pages/love/love.wxss */
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search{
+  display: flex;
+  margin-top: 40rpx;
+  width: 690rpx;
+  height: 100rpx;
+  background-color: #FFFFFF;
+}
+.search input{
+  width: 520rpx;
+  height: 100rpx;
+  box-shadow:  0rpx 4rpx 12rpx -4rpx ;
+  border-radius: 20rpx;
+  padding-left: 10rpx;
+ 
+}
+.searchButton{
+  width: 118rpx; 
+  height:104rpx; 
+  background-color: #7565C6;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+}
+.searchButton image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.title{
+  margin-top: 46rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 128rpx;
+  padding-right: 146rpx;
+}
+.titile1{
+  box-sizing: border-box;
+  font-size: 48rpx;
+  color: #9E9C9D;
+  border-radius: 60rpx;
+}
+.titleHover{
+  box-sizing: border-box;
+  font-size: 48rpx;
+  color: #000000;
+  border-bottom: solid 10rpx #7565C6;
+}
+.newsList .te{
+  background-color: #7565C6;
+  color: #FFFFFF;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  border: solid 1rpx;
+  width: 80rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

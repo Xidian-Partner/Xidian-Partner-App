@@ -1,0 +1,32 @@
+/* components/navbar/navbar.wxss */
+.navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.navbar .arrow-content{
+  position: absolute;
+  left: 40rpx;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+.navbar .arrow{
+  width: 20rpx;
+  height: 20rpx;
+  border: 5rpx solid black;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  transform: rotate(-45deg);
+}
+.navbar .text{
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 28rpx;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

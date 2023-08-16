@@ -1,0 +1,7 @@
+<!--components/friend/friend.wxml-->
+<view class="friend" catchtap="showdetails">
+      <view class="right">
+        <image src="{{icon}}"></image> <text>{{nickName}}</text>
+      </view>
+        <view class="button" catchtap="setting">搭友设置</view>
+      </view>

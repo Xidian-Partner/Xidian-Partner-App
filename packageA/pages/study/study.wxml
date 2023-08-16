@@ -1,0 +1,27 @@
+<!--pages/study/study.wxml-->
+<navbar title="{{titile}}"  main="{{main}}" bindtap="back"></navbar>
+<view class="main" style="margin-top: {{topHeight}}px;">
+
+  <view class="search">
+           <input placeholder="请输入你想要搜索的内容" model:value='{{keyword}}'></input>
+           <button  class="searchButton" bindtap="search"> <image src="/images/search.png" mode=""/></button>
+         </view>
+         <view class="classify"  wx:if="{{!main}}">
+          <view class="a" bindtap="getnews" data-value="{{list[4].tag}}">{{list[4].tag}}</view>
+          <view class="two" bindtap="getnews" data-value="all">全部</view>
+          <view class="one" bindtap="getnews" data-value="{{list[0].tag}}">{{list[0].tag}}</view>
+          <view class="three" bindtap="getnews" data-value="{{list[2].tag}}">{{list[2].tag}}</view>
+          <view class="b" bindtap="getnews" data-value="{{list[3].tag}}">{{list[3].tag}}</view>
+          <view class="c" bindtap="getnews" data-value="{{list[1].tag}}">{{list[1].tag}}</view>
+          <!-- <view class="d"></view> -->
+         </view>
+         <view class="newsList" wx:if="{{main}}" >
+            <view wx:for="{{newsList}}" wx:key="id">
+              <news mId="{{item.id}}" nickName="{{item.userVo.nickName}}" liked="{{item.liked}}" content="{{item.content}}" createTime="{{item.createTime}}" icon="{{item.userVo.icon}}" imagesrc="{{item.images}}" absent="{{item.absent}}" whenMeet="{{item.whenMeet}}" where="{{item.location}}" lowTags="{{item.lowTags}}" title="{{item.title}}"  otherId="{{item.userVo.id}}" isComplete="{{item.isComplete}}" viewTimes="{{item.viewTimes}}" isLiked="{{item.isLiked}}"></news>
+            </view>
+            <view class='load'>
+              <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+              <view style="color: #9E9C9D;" wx:if="{{!isdata}}">没有更多数据了...</view>
+            </view>
+         </view>  
+</view>

@@ -1,0 +1,18 @@
+<!--pages/friends/friends.wxml-->
+<navbar title="我的搭友"  isSowArrow="{{false}}"></navbar>
+
+<view class="content">
+  <view class="list" style="margin-top: {{topHeight}}px;">
+  <view wx:for="{{friends}}" wx:key="index">
+    <friend nickName="{{item.nickName}}" uid="{{item.id}}" icon="{{item.icon}}" ></friend>
+  </view>
+  </view>
+
+</view>
+<!-- <navigator url="/pages/addfriends/addfriends">
+  <view class="add">
+  <image src="/images/add.png" />
+</view>
+</navigator> -->
+
+

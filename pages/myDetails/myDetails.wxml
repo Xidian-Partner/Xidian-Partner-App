@@ -1,0 +1,60 @@
+<!--pages/myDetails/myDetails.wxml-->
+<navbar  title="个人信息" url="/pages/my/my"></navbar>
+<view class="content" style="margin-top: {{topHeight}}px;" >
+  
+
+  <view class="box" style="margin-top: 34rpx;">
+    <view class="line" style="height: 130rpx;">头像 
+       <image src="/images/image.png" bindtap="upImage" wx:if="{{!userIcon}}"></image>
+        <image src="{{userIcon}}"  bindtap="upImage" wx:if="{{(!changeIcon)&&userIcon}}"></image>
+        <image src="{{changeIcon}}"  bindtap="upImage" wx:if="{{changeIcon}}"></image>
+  </view>
+  <view class="line">昵称<input placeholder="{{userNickname}}" model:value="{{userNickname}}" type="nickname"></input></view>
+  <view class="line">QQ<input placeholder="{{userQQ}}" model:value="{{userQQ}}" type="number"></input></view>
+  </view>
+<view class="box">
+  <view class="line">星座 <picker mode="selector" range="{{constellationArray}}" range-key="title" value="{{userXingzuo}}" bindchange="constellationpickerChange">
+        <view class="text">{{constellationArray[userXingzuo].title}}</view>
+      </picker>
+      </view>
+  <view class="line">MBTI  
+      <picker mode="selector" range="{{mbtiArray}}" range-key="title" value="{{userMBTI}}" bindchange="mbtipickerChange">
+        <view class="text">{{mbtiArray[userMBTI].title}}</view>
+      </picker>
+  </view>
+  <view class="line">专业<input placeholder="{{userMajor}}" model:value="{{userMajor}}" type="text"></input></view>
+
+</view>
+<view class="box">
+  <view class="line">需求倾向
+  <picker mode="selector" range="{{array}}" value="{{userNeed}}" bindchange="needpickerChange">
+    <view class="text">{{array[userNeed]}}</view>
+  </picker>
+  </view>
+</view>
+ <view class="box" style="padding-bottom: 30rpx;">
+  <view class="line" style="border: 0;">个人简介</view>
+  <textarea  placeholder="{{userHobby}}" model:value="{{userHobby}}" style="background-color: #FFFFFF; height: 130rpx; color: #767575; border-radius: 20rpx; width: 630rpx; padding-left: 15rpx;" ></textarea>
+ </view>
+
+
+<view class="pic-box">
+  <view class="text">
+    照片墙
+  </view>
+  <view class="pic" >
+    <view class="itembox" wx:for="{{picture}}" wx:if="{{!changepic}}" wx:key="index">
+              <image class="img" src="{{item}}" bindtap="upPicture"></image>
+              <!-- <image class="delete" data-index='{{index}}' bindtap="deletepic" src="../../images/close.png"></image> -->
+          </view>
+          <view class="itembox" wx:for="{{changepic}}" wx:if="{{changepic}}" wx:key="index">
+              <image class="img" src="{{item}}" bindtap="upPicture"></image>
+              <image class="delete" data-index='{{index}}' bindtap="delete" src="../../images/close.png"></image>
+          </view>
+          <image class="img" src="/images/image.png"  wx:if="{{(picture.length<3)}}" bindtap="upPicture"></image>
+    </view>
+</view>
+ 
+  <button style="width: 75%; margin-top: 20rpx; margin-bottom: 30rpx; background-color: #7565C6; border-radius: 30rpx; color: #FFFFFF;" bindtap="saveChange">保存</button>
+  
+</view>

@@ -1,0 +1,28 @@
+<!--pages/friendSetting/friendSetting.wxml-->
+
+<navbar title="搭友设置" url="/pages/friends/friends"></navbar>
+
+<view class="main" style="margin-top: {{topHeight}}px;">
+  <view class="text">搭友权限</view>
+  <view class="content">
+        <!-- <view class="box">
+        <view class="line">
+          动态可见
+        </view>
+        <view class="line">
+        QQ可见<switch checked="{{true}}" color="#7565C6"> </switch>
+        </view>
+      </view> -->
+
+      <view class="box">
+        <view class="line">
+        备注
+        <input model:value="{{altername}}"></input>
+        </view>
+      </view>
+      <view class="button" bindtap="save">
+        保存
+      </view>
+  </view>
+ 
+</view>

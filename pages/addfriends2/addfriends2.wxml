@@ -1,0 +1,21 @@
+<!--pages/addfriends2/addfriends2.wxml-->
+<navbar  url="/pages/friends/friends" title="添加搭友"> </navbar>
+
+<view class="head" style="margin-top: {{topHeight}}px;">
+  <image src="{{icon}}" /><text>{{info.friendName}}</text>
+</view>
+<view class="content">
+  <view class="box">
+    <text>发送添加搭友申请:</text>
+    <input placeholder="我是..." model:value="{{yanzhengmes}}"></input>
+  </view>
+  <view class="box">
+    <text>备注：</text>
+    <input placeholder="输入备注..." model:value="{{beizhu}}"></input>
+  </view>
+</view>
+<view class="bottom">
+  <image src="/images/connecting.jpg" />
+  <view class="button" bindtap="send">发送</view>
+</view>
+
